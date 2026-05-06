@@ -1,0 +1,50 @@
+{
+  "name": "admindek",
+  "private": true,
+  "version": "3.4.0",
+  "description": "Premium Admin Dashboard Template — Next.js 15, React 19, TypeScript, Tailwind CSS. 80+ pages, 9 dashboards, e-commerce, auth, forms, charts, dark mode, RTL, i18n.",
+  "license": "MIT",
+  "author": {
+    "name": "DashboardPack",
+    "email": "dashboardpack@gmail.com",
+    "url": "https://dashboardpack.com/"
+  },
+  "homepage": "https://dashboardpack.com/admindek",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dashboardpack/admindek"
+  },
+  "keywords": [
+    "admin",
+    "dashboard",
+    "template",
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "admin-panel",
+    "admin-template",
+    "admin-dashboard",
+    "ecommerce",
+    "crm",
+    "saas",
+    "dark-mode",
+    "rtl",
+    "i18n",
+    "radix-ui",
+    "shadcn-ui",
+    "tiptap",
+    "apexcharts"
+  ],
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm --filter @admindek/frontend dev",
+    "dev:html": "pnpm --filter @admindek/html dev",
+    "preview": "pnpm --filter @admindek/frontend preview",
+    "format": "pnpm -r format"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=9"
+  }
+}

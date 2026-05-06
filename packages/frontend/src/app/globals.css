@@ -1,0 +1,271 @@
+﻿@import "tailwindcss";
+@source "../../node_modules/@dashboardpack/core";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Prevent horizontal overflow on mobile */
+html, body {
+  overflow-x: hidden;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 4px;
+  --radius-xl: 10px;
+  --radius-2xl: 20px;
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-slide-in-up: slide-in-up 0.35s ease-out;
+  --animate-scale-in: scale-in 0.2s ease-out;
+}
+
+:root {
+  --radius: 0.25rem;               /* 4px — SwitchYard Capital base border-radius */
+
+  /* Neutrals — from SwitchYard Capital SCSS */
+  --background: #f4f7fa;           /* $body-bg — slightly blue-gray */
+  --foreground: #262626;           /* headings color */
+  --card: #ffffff;
+  --card-foreground: #262626;
+  --popover: #ffffff;
+  --popover-foreground: #262626;
+
+  /* Primary — SwitchYard FX Teal #00897b */
+  --primary: #00897b;
+  --primary-foreground: #ffffff;
+
+  /* Secondary / Muted / Accent — neutral grays */
+  --secondary: #f3f5f7;            /* $gray-200 */
+  --secondary-foreground: #262626;
+  --muted: #f3f5f7;                /* $gray-200 */
+  --muted-foreground: #888888;     /* $body-color */
+  --accent: #f3f5f7;               /* $gray-200 */
+  --accent-foreground: #262626;
+
+  /* Semantic */
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --success: #2ca87f;
+  --success-foreground: #ffffff;
+  --warning: #e58a00;
+  --warning-foreground: #262626;
+
+  /* Borders & inputs — neutral gray */
+  --border: #dbe0e5;               /* $gray-300 */
+  --input: #dbe0e5;                /* $gray-300 */
+  --ring: #00897b;
+
+  /* Charts */
+  --chart-1: #00897b;              /* primary teal */
+  --chart-2: #1abc9c;              /* teal (brand-color-1) */
+  --chart-3: #e58a00;              /* orange/warning */
+  --chart-4: #7c4dff;              /* purple */
+  --chart-5: #3ebfea;              /* cyan */
+
+  /* Sidebar — dark navy #263544 */
+  --sidebar: #263544;
+  --sidebar-foreground: #a9b7d0;
+  --sidebar-accent: rgba(0, 0, 0, 0.1);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #00897b;
+  --sidebar-primary: #00897b;
+  --sidebar-primary-foreground: #ffffff;
+
+  /* Layout dimensions */
+  --sidebar-width: 264px;
+  --sidebar-collapsed-width: 80px;
+  --header-height: 74px;
+}
+
+.dark {
+  /* Dark layout color from SCSS: $dark-layout-color: #212224 */
+  --background: #212224;
+  --foreground: #d3d5d9;
+  --primary: #26a69a;              /* slightly lighter teal for dark bg contrast */
+  --primary-foreground: #ffffff;
+  --card: #2a2b2e;
+  --card-foreground: #d3d5d9;
+  --popover: #2a2b2e;
+  --popover-foreground: #d3d5d9;
+  --secondary: #2f3033;
+  --secondary-foreground: #d3d5d9;
+  --muted: #2f3033;
+  --muted-foreground: #8996a4;     /* $gray-500 */
+  --accent: #333538;
+  --accent-foreground: #d3d5d9;
+  --destructive: #dc2626;
+  --destructive-foreground: #d3d5d9;
+  --success: #2ca87f;
+  --success-foreground: #212224;
+  --warning: #e58a00;
+  --warning-foreground: #212224;
+  --border: #3e4249;
+  --input: #3e4249;
+  --ring: #26a69a;
+  --chart-1: #26a69a;
+  --chart-2: #1abc9c;
+  --chart-3: #e58a00;
+  --chart-4: #9775ff;
+  --chart-5: #3ebfea;
+  --sidebar: #1a1b1d;
+  --sidebar-foreground: #a9b7d0;
+  --sidebar-accent: rgba(255, 255, 255, 0.06);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.06);
+  --sidebar-ring: #26a69a;
+  --sidebar-primary: #26a69a;
+  --sidebar-primary-foreground: #ffffff;
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slide-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 0.875rem;             /* 14px — SwitchYard Capital base */
+    color: #888;                     /* $body-color */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground);
+    font-weight: 400;                /* SwitchYard Capital uses regular weight headings */
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  SwitchYard Capital component overrides                                       */
+/* ------------------------------------------------------------------ */
+
+/* Cards — borderless with subtle shadow, no rounded corners */
+[data-slot="card"] {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: 0 1px 3px 0 rgba(69, 90, 100, 0.03);
+}
+[data-slot="card-header"] {
+  padding: 25px;
+}
+[data-slot="card-content"] {
+  padding: 25px;
+}
+[data-slot="card-header"] + [data-slot="card-content"] {
+  padding-top: 0;
+}
+[data-slot="card-footer"] {
+  padding: 25px;
+}
+[data-slot="card-header"] h5,
+[data-slot="card-header"] [data-slot="card-title"] {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Card header bottom border — lighter than default border */
+[data-slot="card-header"] {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+/* More breathing room between header and content */
+[data-slot="card-header"] + [data-slot="card-content"] {
+  padding-top: 25px !important;
+}
+
+/* Dropdowns — SwitchYard Capital purple-tinted shadow, no border */
+[data-radix-popper-content-wrapper] [role="menu"],
+[data-radix-popper-content-wrapper] [data-slot="dropdown-menu-content"] {
+  box-shadow: 0 4px 24px 0 rgba(62, 57, 107, 0.18) !important;
+  border: none !important;
+}
+
+/* Card spacing */
+.mb-6 > [data-slot="card"],
+.gap-6 > [data-slot="card"] {
+  margin-bottom: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.45 0 0 / 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.45 0 0 / 0.45);
+}
+
+.container-boxed body {
+  background-color: #e8ecf1;
+}
+
+.dark.container-boxed body {
+  background-color: #1a1b1d;
+}

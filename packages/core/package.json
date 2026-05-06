@@ -1,0 +1,44 @@
+{
+  "name": "@dashboardpack/core",
+  "version": "1.1.0",
+  "description": "Shared UI components, providers, data modules, and utilities for DashboardPack templates",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    "./*": "./*"
+  },
+  "files": [
+    "components",
+    "lib",
+    "providers",
+    "tsconfig.json"
+  ],
+  "peerDependencies": {
+    "@hookform/resolvers": "^5.0.0",
+    "@tanstack/react-table": "^8.0.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "cmdk": "^1.0.0",
+    "date-fns": "^4.0.0",
+    "input-otp": "^1.0.0",
+    "libphonenumber-js": "^1.0.0",
+    "lucide-react": ">=0.400.0",
+    "next": "^16.0.0",
+    "next-themes": "^0.4.0",
+    "radix-ui": "^1.0.0",
+    "react": "^19.0.0",
+    "react-colorful": "^5.0.0",
+    "react-day-picker": "^9.0.0",
+    "react-dom": "^19.0.0",
+    "react-dropzone": "^15.0.0",
+    "react-hook-form": "^7.0.0",
+    "recharts": "^3.0.0",
+    "sonner": "^2.0.0",
+    "tailwind-merge": "^3.0.0",
+    "zod": "^4.0.0"
+  },
+  "dependencies": {
+    "sugar-high": "^0.9.5"
+  }
+}
