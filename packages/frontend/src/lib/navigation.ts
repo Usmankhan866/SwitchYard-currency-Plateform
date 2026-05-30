@@ -4,7 +4,7 @@
   Calendar, Bell, FileText, Image, UserCircle, BookOpen, Headphones,
   CreditCard, Receipt, Type, FormInput, Table, PieChart, Layers,
   Lock, AlertTriangle, ListChecks, FilePenLine, Smile, Globe,
-  Package, Heart, ShoppingBag, ArrowLeftRight, TrendingUp
+  Package, Heart, ShoppingBag, ArrowLeftRight, TrendingUp, Shield, Target
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -34,6 +34,16 @@ export const navGroups: NavGroup[] = [
         title: "Vanilla Pricer",
         icon: TrendingUp,
         href: "/fx-pricer",
+      },
+      {
+        title: "Barrier Pricer",
+        icon: Shield,
+        href: "/fx-tools/barrier-pricer",
+      },
+      {
+        title: "TARF Simulator",
+        icon: Target,
+        href: "/fx-tools/tarf-simulator",
       },
     ],
   },

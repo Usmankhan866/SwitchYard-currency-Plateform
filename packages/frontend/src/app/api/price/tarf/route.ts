@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const BASE_URL = process.env.PRICING_API_URL ?? "https://pricing-enginee.onrender.com";
-const PRICING_ENGINE_URL = `${BASE_URL}/price/vanilla`;
 
 export async function POST(req: NextRequest) {
   const apiKey = process.env.PRICING_API_KEY;
@@ -18,12 +17,9 @@ export async function POST(req: NextRequest) {
 
   let upstream: Response;
   try {
-    upstream = await fetch(PRICING_ENGINE_URL, {
+    upstream = await fetch(`${BASE_URL}/price/tarf`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-API-Key": apiKey,
-      },
+      headers: { "Content-Type": "application/json", "X-API-Key": apiKey },
       body: JSON.stringify(body),
     });
   } catch (err) {
