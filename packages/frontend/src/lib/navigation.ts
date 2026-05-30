@@ -4,7 +4,7 @@
   Calendar, Bell, FileText, Image, UserCircle, BookOpen, Headphones,
   CreditCard, Receipt, Type, FormInput, Table, PieChart, Layers,
   Lock, AlertTriangle, ListChecks, FilePenLine, Smile, Globe,
-  Package, Heart, ShoppingBag, ArrowLeftRight
+  Package, Heart, ShoppingBag, ArrowLeftRight, TrendingUp
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -29,6 +29,11 @@ export const navGroups: NavGroup[] = [
         title: "Compare Rates",
         icon: ArrowLeftRight,
         href: "/fx-compare",
+      },
+      {
+        title: "Vanilla Pricer",
+        icon: TrendingUp,
+        href: "/fx-pricer",
       },
     ],
   },

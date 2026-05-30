@@ -11,6 +11,7 @@ pnpm install
 pnpm dev
 ```
 
+
 Open [http://localhost:3000](http://localhost:3000) to see the dashboard.
 
 ## What's Included
@@ -75,6 +76,7 @@ Marketing page with 9 sections: hero, stats counter, features grid, interactive 
 | Sonner | 2 | Toast notifications |
 | Lucide | 1 | Icon library |
 
+
 ## Project Structure
 
 ```
@@ -95,6 +97,7 @@ pnpm install              # Install all workspace dependencies
 pnpm dev                  # Start Next.js dev server (localhost:3000)
 pnpm build                # Build all packages
 pnpm preview              # Preview production build
+
 
 # Package-specific
 pnpm --filter @admindek/nextjs dev
