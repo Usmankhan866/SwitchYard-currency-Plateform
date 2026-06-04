@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@dashboardpack/core/lib/utils";
 import { Button } from "@dashboardpack/core/components/ui/button";
@@ -92,7 +92,12 @@ export function Header() {
   const { theme, setTheme } = useTheme();
   const { collapsed, setCollapsed, setMobileOpen, layout } = useSidebar();
   const [customizerOpen, setCustomizerOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const t = useTranslations();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const unreadCount = notifications.filter((n) => !n.read).length;
 
@@ -155,7 +160,7 @@ export function Header() {
             aria-label="Toggle theme"
             className="h-11 w-11 rounded-full text-muted-foreground hover:text-foreground"
           >
-            {theme === "dark" ? (
+            {mounted && theme === "dark" ? (
               <Sun className="h-6 w-6" />
             ) : (
               <Moon className="h-6 w-6" />
